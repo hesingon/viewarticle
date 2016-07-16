@@ -84,26 +84,31 @@ ul{
 
 /*comment section*/
 .comments{
-	background-color: #0039e6;
+	
 	max-width: 450px;
 	border-radius: 10px;
 	margin-top: 0px;
 	/*below are the two propety that hides this section on the right*/
-	right: -300px;
+	right: -380px;
 	top: 45px;
 	position: fixed;
+	border: 2px solid #fff;
 }
 
 .popout-btn {
-	font-family: Impact, Charcoal, sans-serif;
-	margin: 0px 0px 0px 0px;
+	margin-top: 0px;
 	max-width: 110px;
 	padding-left: 7px;
 	border-radius: 7px;
-	background-color: orange;
+	background-color: orange;	
+	color: #1c1c1c;
 
-	left: -20px;
 	position: relative;
+	left: -20px;
+}
+
+.popout-btn h3 {
+	font-weight: bold;
 }
 
 .popout-btn:hover{
@@ -119,6 +124,7 @@ ul{
 	max-width: 400px;
 	max-height: 600px;
 	overflow: auto;
+	background-color: #1c1c1c;
 }
 
 .comment .container h3{
@@ -152,5 +158,50 @@ ul{
 }
 
 /*-------------------------------------------------*/
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background-color: #fff;
+}
 
+/* Float the list items side by side */
+ul.tab li {
+	float: left;
+
+}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 7px 9px;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {background-color: #ccc;}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
 /*-------------------------------------------------*/
+
+#tabcontent {
+	background-color: red;
+	border-color: green;
+}

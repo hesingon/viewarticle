@@ -37,27 +37,69 @@
   <div class="comments">
     <div class="container">
 
-      <div class="popout-btn">
+      <div class="popout-btn" id="comment-section">
         <h3>Comment Section</h3>
       </div>
 
-      <form>
-        <div class="form-group">
-          <textarea class="form-control status-box" rows="2" placeholder="What's on your mind?"></textarea>
+      <ul class="tab">
+        <li><a href="#" class="tablinks" onclick="openCity(event, 'Professional')">Professional</a></li>
+        <li><a href="#" class="tablinks" onclick="openCity(event, 'Academia')">Academia</a></li>
+        <li><a href="#" class="tablinks" onclick="openCity(event, 'Public')">Public</a></li>
+      </ul>
+
+
+
+      <div id="Professional" class="tabcontent">
+        <form>
+          <div class="form-group">
+            <textarea class="form-control status-box" rows="2" placeholder="What's on your mind?"></textarea>
+          </div>
+        </form>
+        <div class="button-group pull-right">
+          <p class="counter">0</p>
+          <a href="#" class="btn btn-primary">Post</a>
         </div>
-      </form>
-      <div class="button-group pull-right">
-        <p class="counter">0</p>
-        <a href="#" class="btn btn-primary">Post</a>
+
+        <ul class="posts">
+          <li>Teo Shirley S.: This is a comment made by a Law practitioner.</li>
+        </ul>
       </div>
 
-      <ul class="posts">
-        <li>Jesse Eisenburg: Did you see my movie [Now you see me 2] yet?</li>
-      </ul>
+      <div id="Academia" class="tabcontent">
+        <form>
+          <div class="form-group">
+            <textarea class="form-control status-box" rows="2" placeholder="What's on your mind?"></textarea>
+          </div>
+        </form>
+        <div class="button-group pull-right">
+          <p class="counter">0</p>
+          <a href="#" class="btn btn-primary">Post</a>
+        </div>
+
+        <ul class="posts">
+          <li>Prof. Arnald Simester: This is a comment made by a Law professor from NUS Law School.</li>
+        </ul> 
+      </div>
+
+      <div id="Public" class="tabcontent">
+        <form>
+          <div class="form-group">
+            <textarea class="form-control status-box" rows="2" placeholder="What's on your mind?"></textarea>
+          </div>
+        </form>
+        <div class="button-group pull-right">
+          <p class="counter">0</p>
+          <a href="#" class="btn btn-primary">Post</a>
+        </div>
+
+        <ul class="posts">
+          <li>Jesse Eisenburg: I don't mean to advertise, but did you see my movie [Now you see me 2] yet?</li>
+        </ul>
+      </div>
+
     </div>
   </div>
-
-
+  <!--___________________________________________________-->
 
 
   <div class="content">
@@ -74,11 +116,11 @@
       <div class="body">
         <div class="prov1">
           <div class="prov1Hdr"><a name="pr1-he-."></a><span class="">Short title</span></div>
-          <div id="pr1-." class="prov1Txt"><strong>1.</strong>&nbsp;&nbsp;This Act may be cited as the <a href="http://statutes.agc.gov.sg/aol/search/display/view.w3p;page=0;query=DocId%3A%2262b430cb-0734-4e75-acf8-0872caebc44d%22%20Status%3Ainforce%20Depth%3A0%20ValidTime%3A19990801000000%20TransactionTime%3A20160627000000;rec=0">Civil Law Act</a>.</div>
+          <div id="pr1-." class="prov1Txt pTxt"><strong>1.</strong>&nbsp;&nbsp;This Act may be cited as the <a href="http://statutes.agc.gov.sg/aol/search/display/view.w3p;page=0;query=DocId%3A%2262b430cb-0734-4e75-acf8-0872caebc44d%22%20Status%3Ainforce%20Depth%3A0%20ValidTime%3A19990801000000%20TransactionTime%3A20160627000000;rec=0">Civil Law Act</a>.</div>
         </div>
         <div class="prov1">
           <div class="prov1Hdr"><a name="pr2-he-."></a><span class="">Interpretation</span></div>
-          <div id="pr2-." class="prov1Txt"><strong>2.</strong>&nbsp;&nbsp;In this Act, unless the context otherwise requires&nbsp;&mdash;
+          <div id="pr2-." class="prov1Txt pTxt"><strong>2.</strong>&nbsp;&nbsp;In this Act, unless the context otherwise requires&nbsp;&mdash;
             <div class="def">&ldquo;court&rdquo; means the High Court and includes any Judge thereof whether sitting in court or in chambers;</div>
             <div class="def">&ldquo;executor&rdquo; means the executor or administrator of a deceased person, and includes, as regards any obligation, any person who takes possession of or intermeddles with the property of a deceased person;</div>
             <div class="def">&ldquo;will&rdquo; includes a codicil.</div>
@@ -86,7 +128,7 @@
         </div>
         <div class="prov1">
           <div class="prov1Hdr"><a name="pr3-he-."></a><span class="">Law and equity to be administered concurrently</span></div>
-          <div id="pr3-." class="prov1Txt"><strong>3.</strong>&nbsp;&nbsp;In every civil cause or matter commenced in the court, law and equity shall be administered by the court in its original jurisdiction and by the Court of Appeal according to the rules following:
+          <div id="pr3-." class="prov1Txt"><strong>3.</strong>&nbsp;&nbsp;<div class="pTxt">In every civil cause or matter commenced in the court, law and equity shall be administered by the court in its original jurisdiction and by the Court of Appeal according to the rules following:</div>
             <div class="prov1Hdr"><em>Plaintiffs to have equitable relief in claims</em></div>
             <div class="p1_1">
               <div class="p1No">(<em>a</em>)</div>

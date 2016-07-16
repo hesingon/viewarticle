@@ -1,9 +1,11 @@
 var main = function(){
-	$('#logo a').fadeIn(600);
 
-	$('.btn').click(function() {
+
+	$('.btn').click(function() {  //the post button
 		var post = $('.status-box').val();
-		$('<li>').text(post).prependTo('.posts');
+		$currentSection = $(this).parent().parent();
+		$
+		$('<li>').text(post).prependTo($currentSection.children('.posts'));
 		$('.status-box').val('');
 		$('.counter').text('0');
 		$('.btn').addClass('disabled'); 
@@ -24,19 +26,36 @@ var main = function(){
 
 
 	/* Push the body and the nav over by 285px over */
-	$('.popout-btn').click(function() {
-		$('.comments').animate({ 
-			right: '0px' /* "0px" is the position on the site page */
-		}, 600); /*time taken during which the icon menu push right */
+	var sectionOut = false;
 
-		$('#text-field').animate({
-			width: "auto",
-			marginRight: "400px"
-		});
+	$('.popout-btn').click(function() {
+		if(sectionOut === false){
+			$('.comments').animate({ 
+				right: '0px' /* "0px" is the position on the site page */
+			}, 600); /*time taken during which the icon menu push right */
+
+			$('#text-field').animate({
+				width: "auto",
+				marginRight: "400px"
+			});
+			sectionOut = true;
+			return;
+		}
+
+		if(sectionOut === true){
+			$('.comments').animate({right:'-380px'}, 600);
+			$('#text-field').animate({
+				width:"auto",
+				marginRight: "250px"
+			})
+			sectionOut = false;
+		}
 	});
 
+	//This part is about highlighting the color
+	var prevPara 
 	$('.pTxt').click(function() {
-		$('.content').animate({
+		$('.pTxt').animate({
 			color: "#737373"
 		});
 
@@ -47,6 +66,7 @@ var main = function(){
 		$('.comments').animate({ 
 			right: '0px' /* "0px" is the position on the site page */
 		}, 600); /*time taken during which the icon menu push right */
+		sectionOut = true;
 
 		$('#text-field').animate({
 			width: "auto",
@@ -54,10 +74,27 @@ var main = function(){
 		});
 	});
 
-	
-
-	
-
 }
 
 $(document).ready(main);
+
+function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
